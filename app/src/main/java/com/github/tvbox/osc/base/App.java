@@ -12,7 +12,8 @@ import com.github.tvbox.osc.util.PlayerHelper;
 import com.kingja.loadsir.core.LoadSir;
 import com.orhanobut.hawk.Hawk;
 
-import me.jessyan.autosize.AutoSize;
+import java.util.ArrayList;
+
 import me.jessyan.autosize.AutoSizeConfig;
 import me.jessyan.autosize.unit.Subunits;
 
@@ -52,10 +53,20 @@ public class App extends MultiDexApplication {
         Hawk.put(HawkConfig.DEBUG_OPEN, false);
         if (!Hawk.contains(HawkConfig.PLAY_TYPE)) {
             Hawk.put(HawkConfig.PLAY_TYPE, 1);
+            ArrayList<String> history = new ArrayList<>();
+            history.add("https://tv.5ye.cc");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/j3zp.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ikbb.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ikbb.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/fj.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/xymc.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/g6qm.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/1pw8.json");
+            history.add("https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/pnzh.json");
+            Hawk.put(HawkConfig.API_HISTORY, history);
+            Hawk.put(HawkConfig.API_URL, "https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json");
         }
-        //https://tv.5ye.cc
-        Hawk.put(HawkConfig.API_URL, "https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json");
-
     }
 
     public static App getInstance() {
