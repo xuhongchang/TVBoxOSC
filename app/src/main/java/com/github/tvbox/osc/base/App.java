@@ -53,6 +53,9 @@ public class App extends MultiDexApplication {
         if (!Hawk.contains(HawkConfig.PLAY_TYPE)) {
             Hawk.put(HawkConfig.PLAY_TYPE, 1);
         }
+        //https://tv.5ye.cc
+        Hawk.put(HawkConfig.API_URL, "https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json");
+
     }
 
     public static App getInstance() {
